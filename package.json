@@ -1,6 +1,6 @@
 {
   "name": "mv-stockchart",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/Cole-yu/mv-stockchart#readme",
   "repository": {
     "type": "git",
@@ -9,7 +9,6 @@
   "private": false,
   "description": "移动端绘图组件",
   "main": "lib/mv-stockchart.umd.min.js",
-  "module": "packages/index.js",
   "keyword": "移动端绘图组件",
   "scripts": {
     "dev": "npx webpack serve --progress=profile --node-env development --config build/webpack.dev.js",
