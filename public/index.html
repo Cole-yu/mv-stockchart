@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no,viewport-fit=cover"/>
+    <link rel="icon" href="<%= PUBLIC_PATH %>favicon.ico">
+    <title>stock-chart</title>
+    <script>
+      var whenReady=(function(){var funcs=[];var ready=false;function handler(e){if(ready){return}if(e.type==="onreadystatechange"&&document.readyState!=="complete"){return}for(var i=0;i<funcs.length;i++){funcs[i].call(document)}ready=true;funcs=null}if(document.addEventListener){document.addEventListener("DOMContentLoaded",handler,false);document.addEventListener("readystatechange",handler,false);window.addEventListener("load",handler,false)}else{if(document.attachEvent){document.attachEvent("onreadystatechange",handler);window.attachEvent("onload",handler)}}return function whenReady(fn){if(ready){fn.call(document)}else{funcs.push(fn)}}})();function setResize(){var doc=document,win=window;var docEl=doc.documentElement,con=doc.getElementById("container"),resizeEvt="orientationchange" in window?"orientationchange":"resize",recalc=function(){var clientWidth=con.clientWidth;if(!clientWidth){return}docEl.style.fontSize=100*(clientWidth/750)+"px";document.body.style.visibility="visible"};if(!doc.addEventListener){return}win.addEventListener(resizeEvt,recalc,false);doc.addEventListener("DOMContentLoaded",recalc,false)}whenReady(setResize);
+    </script>
+  </head>
+  <body id="container">
+    <!-- <noscript>
+      <strong>We're sorry but stock-chart doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript> -->
+    <div id="app"></div>
+    <script src="<%= PUBLIC_PATH %>static/js/vue/2.7.15/vue.runtime.min.js"></script>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
